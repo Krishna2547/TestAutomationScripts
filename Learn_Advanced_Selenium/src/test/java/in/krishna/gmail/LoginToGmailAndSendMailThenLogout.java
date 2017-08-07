@@ -10,9 +10,9 @@ import in.krishna.gmailPages.LoginPage;
  * @author Krishna
  *
  */
-public class LoginToGmail extends BaseClass {
+public class LoginToGmailAndSendMailThenLogout extends BaseClass {
 	
-	@Test(priority=1, description="Login with valid Credentails and Logout", enabled=true)
+	@Test(priority=1, description="Login with valid Credentails, send Email and Logout", enabled=true)
 	public void LoginTest() {
 		
 		driver.get("http://www.gmail.com");
@@ -23,6 +23,9 @@ public class LoginToGmail extends BaseClass {
 		
 		HomePage onHomePage=PageFactory.initElements(driver, HomePage.class);
 		onHomePage.verifyLogin();
+		
+		onHomePage.composeAndSendMail();
+		
 		onHomePage.Logout();
 		
 		onLoginPage.verifySignOut();

@@ -1,6 +1,5 @@
 package in.krishna.gmailPages;
 
-import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,20 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import in.krishna.common.DataTable;
+import in.krishna.common.PageUtil;
 /**
  * @author Krishna
  *
  */
-public class LoginPage {
+public class LoginPage extends PageUtil {
 	WebDriver driver;
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
 	}
-	
-	DataTable dt=new DataTable();
-	HashMap<String, String> prop=dt.readFile();
 
 	@FindBy(xpath="//input[@type='email']")
 	WebElement Email;
