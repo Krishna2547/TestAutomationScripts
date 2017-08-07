@@ -4,7 +4,7 @@
   <test name="Test" enabled="true">
 	<parameter name="browser" value="chrome"></parameter>
 	<classes>
-		<class name="in.krishna.gmail.LoginToGmail" />
+		<class name="in.krishna.gmail.LoginToGmail_SendMail_Logout" />
 	</classes>
 </test> 
 </suite> 

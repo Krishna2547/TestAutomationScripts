@@ -10,7 +10,7 @@ import in.krishna.gmailPages.LoginPage;
  * @author Krishna
  *
  */
-public class LoginToGmailAndSendMailThenLogout extends BaseClass {
+public class LoginToGmail_SendMail_Logout extends BaseClass {
 	
 	@Test(priority=1, description="Login with valid Credentails, send Email and Logout", enabled=true)
 	public void LoginTest() {
