@@ -22,10 +22,9 @@ public class LoginToGmail_SendMail_Logout extends BaseClass {
 		onLoginPage.LoginToGmail();
 		
 		HomePage onHomePage=PageFactory.initElements(driver, HomePage.class);
+		
 		onHomePage.verifyLogin();
-		
 		onHomePage.composeAndSendMail();
-		
 		onHomePage.Logout();
 		
 		onLoginPage.verifySignOut();

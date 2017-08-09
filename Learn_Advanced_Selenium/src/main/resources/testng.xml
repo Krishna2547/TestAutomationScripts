@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" name="WebTesting" parallel="none">
-  <test name="Test" enabled="true">
+
+  <test name="Test" enabled="false">
 	<parameter name="browser" value="chrome"></parameter>
 	<classes>
 		<class name="in.krishna.gmail.LoginToGmail_SendMail_Logout" />
 	</classes>
 </test> 
+
+ <test name="Test" enabled="true">
+	<parameter name="browser" value="chrome"></parameter>
+	<classes>
+		<class name="in.krishna.naukari.NaukariLogin" />
+	</classes>
+</test> 
+
 </suite> 
