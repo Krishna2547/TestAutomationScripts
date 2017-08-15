@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Basic Suite1]" parallel="tests">
+  <test name="Parallel testing in ie(failed)" parallel="methods">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="selenium.testNG.TestNG_ParallelTesting">
+        <methods>
+          <include name="OpenFacebook"/>
+          <include name="End"/>
+          <include name="Start"/>
+        </methods>
+      </class> <!-- selenium.testNG.TestNG_ParallelTesting -->
+    </classes>
+  </test> <!-- Parallel testing in ie(failed) -->
+</suite> <!-- Failed suite [Basic Suite1] -->

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="Basic Suite1" parallel="tests">
+
+	<test name="Testing Anotations" parallel="false" enabled="false">
+		<groups>
+			<run>
+				<exclude name="B" />
+				<include name="A" />
+			</run>
+		</groups>
+		<classes>
+			<class name="selenium.testNG.TestNG_Annotations" />
+		</classes>
+	</test>
+
+	<test name="Testing DataProvider" parallel="false" enabled="false">
+		<groups>
+			<run>
+				<exclude name="A"></exclude>
+				<include name="B"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="selenium.testNG.TestNG_DataProvider" />
+		</classes>
+	</test>
+
+	<test name="Parallel testing in firefox" preserve-order="true"
+		verbose="5" parallel="true" thread-count="3" enabled="false">
+		<parameter name="browser" value="Firefox"></parameter>
+		<classes>
+			<class name="selenium.testNG.TestNG_ParallelTesting" />
+		</classes>
+	</test>
+
+	<test name="Parallel testing in ie" verbose="5" parallel="true"
+		thread-count="3" enabled="false">
+		<parameter name="browser" value="ie"></parameter>
+		<classes>
+			<class name="selenium.testNG.TestNG_ParallelTesting" />
+		</classes>
+	</test>
+
+	<test name="Parallel testing in chrome" verbose="5" parallel="true"
+		thread-count="3" enabled="false">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="selenium.testNG.TestNG_ParallelTesting" />
+		</classes>
+	</test>
+	
+	<test name="Read and Write Excel Data" verbose="5" parallel="false"
+		thread-count="0" enabled="true">
+		<parameter name="ExcelPath" value="./Resources/Data/TestData.xlsx"></parameter>
+		<classes>
+			<class name="selenium.testNG.ExcelData" />
+		</classes>
+	</test>
+</suite> 
