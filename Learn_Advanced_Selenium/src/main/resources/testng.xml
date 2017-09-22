@@ -10,7 +10,7 @@
 </test> 
 
  <test name="Test" enabled="true">
-	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="browser" value="Firefox"></parameter>
 	<parameter name="dataPath" value="/src/test/resources/TestData/naukari.data"></parameter>
 	<classes>
 		<class name="in.krishna.naukari.NaukariLogin" />
