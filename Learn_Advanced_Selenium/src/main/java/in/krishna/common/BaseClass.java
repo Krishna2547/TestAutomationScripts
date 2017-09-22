@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
@@ -36,8 +37,12 @@ public void Start(String Browser) {
 				
 			}else if(Browser.equalsIgnoreCase("chrome")) {
 				
+				ChromeOptions options = new ChromeOptions(); 
+				options.setBinary("C:\\Users\\Lenovo\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe"); 
+				
 				System.setProperty("webdriver.chrome.driver", "./src/main/resources/Drivers/Chrome/chromedriver.exe");
-				driver=new ChromeDriver();
+				driver = new ChromeDriver(options);
+				
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
