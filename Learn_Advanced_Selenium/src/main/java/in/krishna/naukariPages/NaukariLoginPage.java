@@ -75,6 +75,7 @@ public class NaukariLoginPage extends PageUtil {
 	
 	@FindBy(xpath="//div[contains(text(),'Last updated')]")
 	WebElement TimeStamp;
+	
 	private void lastUpdate() {
 		
 		System.out.println(TimeStamp.getText());
@@ -90,4 +91,5 @@ public class NaukariLoginPage extends PageUtil {
 		validateLogin();
 		lastUpdate();
 	}
+	
 }

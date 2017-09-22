@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import in.krishna.common.BaseClass;
 import in.krishna.naukariPages.NaukariLoginPage;
+import in.krishna.naukariPages.NaukariProfilePage;
 
 public class NaukariLogin extends BaseClass{
 
@@ -30,13 +31,13 @@ public class NaukariLogin extends BaseClass{
 		}
 			driver.switchTo().window(Parent);
 			System.out.println(driver.getTitle());
-		/*	
-			driver.findElement(By.xpath("//div[text()='Login']")).click();
-			driver.findElement(By.name("email")).sendKeys("k.t.krishna2547@gmail.com");
-			driver.findElement(By.name("PASSWORD")).sendKeys("krishna.nd");
-			driver.findElement(By.xpath("//button[text()='Login']")).click();
-		*/
+			
 			NaukariLoginPage onNaukariLoginPage=PageFactory.initElements(driver, NaukariLoginPage.class);
 			onNaukariLoginPage.Signin();
+			
+			NaukariProfilePage onNaukariProfilePage=PageFactory.initElements(driver, NaukariProfilePage.class);
+			onNaukariProfilePage.UpdateAndSave();
+			
+			onNaukariProfilePage.Logout();
 	}
 }
