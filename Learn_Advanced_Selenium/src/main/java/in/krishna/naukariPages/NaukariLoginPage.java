@@ -67,7 +67,7 @@ public class NaukariLoginPage extends PageUtil {
 		wait.until(ExpectedConditions.visibilityOf(name));
 		
 		jse=(JavascriptExecutor) driver;
-		jse.executeScript("scroll(0,1000)");
+		jse.executeScript("scroll(0,300)");
 		
 		Assert.assertTrue(name.isDisplayed(),"not logged in");
 		System.out.println("Successfully logged in");

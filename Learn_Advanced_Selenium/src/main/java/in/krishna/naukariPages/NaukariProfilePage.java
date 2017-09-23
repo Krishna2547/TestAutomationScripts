@@ -1,5 +1,6 @@
 package in.krishna.naukariPages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,10 +18,14 @@ public class NaukariProfilePage extends PageUtil {
 		this.driver=driver;
 	}
 	
+	JavascriptExecutor jse;
+	
 	@FindBy(xpath="//b[contains(text(),'Update Profile')]")
 	WebElement updateButton;
 	
 	private void clickOnUpdateButton() {
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOf(updateButton));
 		updateButton.click();
 	}
 	
@@ -45,6 +50,9 @@ public class NaukariProfilePage extends PageUtil {
 	WebElement saveButton;
 	
 	private void clickOnSaveButton() {
+		
+		jse=(JavascriptExecutor) driver;
+		jse.executeScript("scroll(0,200)");
 		saveButton.click();
 	}
 	
